@@ -25,73 +25,74 @@
 
 
 	<div class="container">
-		<!-- Material input -->
-		<div class="md-form">
-			<input type="text" id="form1" class="form-control"> <label
-				for="form1">Cedula Cliente</label>
-		</div>
+		<form action="/Mocha-Zhingri-Christian-Ronaldo-Examen/RegistraTicket" method="POST">
+			<!-- Material input -->
+			<div class="md-form">
+				<input type="text" id="form1" class="form-control" name="cedula"> <label
+					for="form1">Cedula Cliente</label>
+			</div>
 
-		<!-- Material input -->
-		<div class="md-form">
-			<input type="text" id="form1" class="form-control"> <label
-				for="form1">Placa Del Vehiculo</label>
-		</div>
+			<!-- Material input -->
+			<div class="md-form">
+				<input type="text" id="form1" class="form-control" name="placaVehiculo"> <label
+					for="form1">Placa Del Vehiculo</label>
+			</div>
 
-		<!-- Material input -->
-		<div class="md-form">
-			<input type="text" id="form1" class="form-control"> <label
-				for="form1">Marca Del Vehiculo</label>
-		</div>
-
-
-		<!-- Material input -->
-		<div class="md-form">
-			<input type="text" id="form1" class="form-control"> <label
-				for="form1">Modelo Del Vehiculo</label>
-		</div>
+			<!-- Material input -->
+			<div class="md-form">
+				<input type="text" id="form1" class="form-control" name="marcaVehiculo"> <label
+					for="form1">Marca Del Vehiculo</label>
+			</div>
 
 
-		<!-- Material input -->
-		<div class="md-form">
-			<input type="text" id="form1" class="form-control"> <label
-				for="form1">Numero Del Ticket</label>
-		</div>
+			<!-- Material input -->
+			<div class="md-form">
+				<input type="text" id="form1" class="form-control" name="modeloVehiculo"> <label
+					for="form1">Modelo Del Vehiculo</label>
+			</div>
 
 
-
-		<!-- Material input -->
-		<div class="md-form">
-			<input type="date"><label for="form1">Fecha de
-				entrada</label>
-		</div>
-
-		<br>
-
-		<!-- Material input -->
-		<div class="md-form">
-			<input type="time" name="hora"> <label for="form1">Hora
-				de entrada</label>
-		</div>
+			<!-- Material input -->
+			<div class="md-form">
+				<input type="text" id="form1" class="form-control" name="numeroTicket"> <label
+					for="form1">Numero Del Ticket</label>
+			</div>
 
 
 
-		<!-- Material input -->
-		<div class="md-form">
-			<input type="date"> <label for="form1">Fecha de
-				Salida</label>
-		</div>
+			<!-- Material input -->
+			<div class="md-form">
+				<input type="date"><label for="form1" name="fechaEntrada">Fecha de
+					entrada</label>
+			</div>
 
-		<br>
+			<br>
 
-		<!-- Material input -->
-		<div class="md-form">
-			<input type="time" name="hora"> <label for="form1">Hora
-				de Salida</label>
-		</div>
-
-		<button type="button" class="btn btn-dark">Consultar</button>
+			<!-- Material input -->
+			<div class="md-form">
+				<input type="time" name="hora"> <label for="form1" name="horaEntrada">Hora
+					de entrada</label>
+			</div>
 
 
+
+			<!-- Material input -->
+			<div class="md-form">
+				<input type="date"> <label for="form1" name="fechaSalida">Fecha de
+					Salida</label>
+			</div>
+
+			<br>
+
+			<!-- Material input -->
+			<div class="md-form">
+				<input type="time" name="hora"> <label for="form1" name="horaSalida">Hora
+					de Salida</label>
+			</div>
+
+			<button type="button" class="btn btn-dark">Consultar</button>
+
+		</form>
 		<!-- JQuery -->
 		<script type="text/javascript"
 			src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
