@@ -15,23 +15,19 @@ public class Cliente implements Serializable{
 	private String direccion;
 	private String telefono;
 	
-	@OneToMany(cascade = CascadeType.ALL, mappedBy = "cliente", orphanRemoval = true)
-	private List<Vehiculo> vehiculo;
+	@OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL, orphanRemoval = true)
+	private List<Vehiculo> vehiculos;
 	
 	public Cliente() {
-		vehiculo = new ArrayList<Vehiculo>();
-		
+		vehiculos = new ArrayList<Vehiculo>();
 	}
 	
-	
-
 	public Cliente(String cedula, String nombre, String direccion, String telefono) {
-		super();
 		this.cedula = cedula;
 		this.nombre = nombre;
 		this.direccion = direccion;
 		this.telefono = telefono;
-		vehiculo = new ArrayList<Vehiculo>();
+		vehiculos = new ArrayList<Vehiculo>();
 	}
 
 
@@ -85,14 +81,14 @@ public class Cliente implements Serializable{
 
 
 
-	public List<Vehiculo> getVehiculo() {
-		return vehiculo;
+	public List<Vehiculo> getVehiculos() {
+		return vehiculos;
 	}
 
 
 
-	public void setVehiculo(List<Vehiculo> vehiculo) {
-		this.vehiculo = vehiculo;
+	public void setVehiculos(List<Vehiculo> vehiculos) {
+		this.vehiculos = vehiculos;
 	}
 
 
@@ -100,20 +96,19 @@ public class Cliente implements Serializable{
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}
-
-
+	
 	public void addVehiculo(Vehiculo vehiculo) {
-		if (!vehiculo.contains(vehiculo)) {
+		if (!vehiculos.contains(vehiculo)) {
+			vehiculos.add(vehiculo);
 			vehiculo.setCliente(this);
-			
 		}
 	}
-	public void eliminarVehiculo(Vehiculo vehiculo) {
-		vehiculo.remove(vehiculo);
+	
+	public void removeVehiculo(Vehiculo vehiculo) {
+		vehiculos.remove(vehiculo);
 		vehiculo.setCliente(null);
-		
-		
 	}
+
 
 	@Override
 	public int hashCode() {
@@ -157,14 +152,6 @@ public class Cliente implements Serializable{
 			return false;
 		return true;
 	}
-
-	@Override
-	public String toString() {
-		return "Cliente [cedula=" + cedula + ", nombre=" + nombre + ", direccion=" + direccion + ", telefono="
-				+ telefono + "]";
-	}
-	
-	
 	
 	
 

@@ -8,14 +8,19 @@ import javax.persistence.*;
 public class Vehiculo implements Serializable {
 	private static final long serialVersionUID = 1L;
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	private String placa;
 	private String marca;
 	private String modelo;
 	
-	@ManyToOne(fetch = FetchType.LAZY)
+	@ManyToOne
 	@JoinColumn
 	private Cliente cliente;
+	
+	@OneToOne(mappedBy = "vehiculo", cascade = CascadeType.ALL, orphanRemoval = true)
+	private Ticket ticket;
+	
 	public Vehiculo() {
 		super();
 	}
