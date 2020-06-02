@@ -6,7 +6,7 @@ LA Base de Datos
 -persistencia
 
 <img width="1280" alt="Screen Shot 2020-06-02 at 12 57 27" src="https://user-images.githubusercontent.com/34308608/83553309-9e0c9900-a4d0-11ea-9f98-ab20a9086e73.png">
-![Screen Shot 2020-06-02 at 12 57 27 2](https://user-images.githubusercontent.com/34308608/83553312-9fd65c80-a4d0-11ea-8727-b686ffdbe009.png)
+
 
 - Paquetes DAO, JPA, Modelo
 
