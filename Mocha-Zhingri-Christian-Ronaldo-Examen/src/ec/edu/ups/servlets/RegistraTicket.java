@@ -62,17 +62,9 @@ public class RegistraTicket extends HttpServlet {
 		String horaSalida = request.getParameter("horaSalida");
 
 		DaoTicket ticketDao = DAOFactory.getFactory().getDaoTicket();
-		Ticket phone = new Ticket(numeroTicket, fechaEntrada, fechaSalida,horaSalida);
+		Ticket ticket = new Ticket(Integer.parseInt(numeroTicket), fechaEntrada, fechaSalida,horaSalida);
 
-		DaoVehiculo vehicuoDao = DAOFactory.getFactory().getUsuarioDAO();
-		user user = userDao.findById(String.valueOf(request.getSession().getAttribute("userId")));
 
-		user.addTelefono(phone);
-		userDao.update(user);
-//        phone.setUser(user);
-//        phoneDao.create(phone);
-
-		response.sendRedirect("/AgendaTelefonica/Agenda");
 
 	}
 
